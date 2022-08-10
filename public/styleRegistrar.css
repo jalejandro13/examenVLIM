@@ -1,0 +1,18 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.registrar-form{
+    width: 60vw;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    border: 2px solid black;
+}
+
+@media (max-width: 767.98px) {
+    .registrar-form {
+        width: 90vw;
+    }
+}

@@ -1,0 +1,27 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.table-sql{
+    width: 60vw;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.hr-titulo{
+    margin: auto;
+    border: 1px solid black;
+}
+.hr-producto{
+    width: 90%;
+    margin: auto;
+}
+
+@media (max-width: 575.98px) {
+    .table-sql{
+        width: 90vw;
+    }
+}

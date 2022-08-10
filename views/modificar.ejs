@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styleModificar.css">
+
+    <title>Modificar informacion de un producto</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/db/registrar">Registrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/db/modificar">Modificar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/db/ver">Ver base de datos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/db/eliminar">Eliminar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="mt-5 text-center">
+            <h2>Modificar información</h2>
+            <p>Escribe el nombre exacto del producto y lo que quieres cambiar</p>
+        </header>
+        
+        <form class="container-fluid modificar-form mt-4 mt-lg-5 pt-3 pb-3 ps-5 pe-5" action="/db/modificar" method="POST">
+            <div class="row mb-3">
+                <label for="nombre" class="form-label col-12">Nombre del producto:</label>
+                <input type="text" class="form-control col-12" name="nombre" id="nombre" autofocus required>
+            </div>
+
+            <div class="row mb-3">
+                <select class="form-select" name="aCambiar" required>
+                    <option disabled>Selecciona el valor que quieres cambiar</option>
+                    <option value="cantidad">Cantidad</option>
+                    <option value="precio">Precio</option>
+                </select>
+            </div>
+
+            <div class="row mb-3">
+                <label for="nuevoValor" class="form-label col-12">Nueva cantidad o precio:</label>
+                <input type="number" min="1" step="0.01" class="form-control col-12" name="nuevoValor" id="nuevoValor" required>
+            </div>
+
+            <div class="row justify-content-evenly"> 
+                <button type="submit" class="btn btn-info col-auto">Modificar</button>
+                <a href="/" class="btn btn-secondary col-auto">Regresar a inicio</a>
+            </div>
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
